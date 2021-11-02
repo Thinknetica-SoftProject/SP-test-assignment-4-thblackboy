@@ -17,5 +17,15 @@
 ## Решение:
 
 
+my_string= File.read("./data/1.txt")
+stage=0
+(0..my_string.length).each { |i|
+  if my_string[i] == '('
+    stage += 1
+  elsif my_string[i] == ')'
+    stage -= 1
+  end
+}
+puts stage
 
 
