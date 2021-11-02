@@ -16,3 +16,13 @@
 #
 ## Решение:
 
+require 'digest'
+md5 = Digest::MD5.new
+input = gets.chomp
+my_num=1
+my_str=input+my_num.to_s
+while !(md5.hexdigest(my_str)[0..4].eql?("00000"))
+  my_num+=1
+  my_str=input+my_num.to_s
+end
+puts my_num

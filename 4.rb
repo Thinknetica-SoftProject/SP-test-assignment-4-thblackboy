@@ -15,5 +15,16 @@
 #
 #
 ## Решение:
+#
+def presentArea(sizes)
+  a=sizes.split("x").map(&:to_i)
+  return 2*(a[0]*a[1]+a[0]*a[2]+a[1]*a[2])+([a[0]*a[1],a[0]*a[2],a[1]*a[2]].min)
+  end
+arr = File.readlines("./data/4.txt")
+area=0
+for i in (0..arr.size-1) do
+  area+=presentArea(arr[i])
+end
+puts area
 
 
