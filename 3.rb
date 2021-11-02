@@ -9,22 +9,7 @@
 # - Результат должен быть выведен в консоль командой puts
 #
 ## Решение:
-def differ(str_arr)
-  max= -(2**(0.size * 8 -2))
-  min = (2**(0.size * 8 -2) -1)
-  (0..str_arr.size).each { |i|
 
-    if str_arr[i].to_i > max
-      max = str_arr[i].to_i
-    end
-    if i.to_i < min
-      min = str_arr[i].to_i
-    end
-  }
-
-
-  return max-min
-end
 
 arr = File.readlines("./data/3.txt")
 my_num=0
